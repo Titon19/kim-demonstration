@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>KISI Asset Management — Korea Investment Management Indonesia</title>
+    <meta name="description" content="PT Korea Investment Management Indonesia (KISI Asset Management) — Manajer Investasi terdaftar OJK. Solusi Reksa Dana terpercaya untuk tujuan keuangan Anda.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================================
+   KIM Theme — Static Homepage Preview
+   PT Korea Investment Management Indonesia (KISI Asset Management)
+   ========================================================================== */
+
+/* --- 1. CSS CUSTOM PROPERTIES --- */
+:root {
+    --clr-primary:       #5d8cb3;
+    --clr-primary-dark:  #4a7399;
+    --clr-primary-light: #7aaecf;
+    --clr-primary-pale:  #e8f1f8;
+    --clr-navy:          #1A3E59;
+    --clr-navy-dark:     #122c3f;
+    --clr-navy-light:    #244f70;
+    --clr-brown:         #6E4224;
+    --clr-brown-dark:    #4a2b15;
+    --clr-brown-light:   #F2BC79;
+    --clr-grey:          #363637;
+    --clr-grey-mid:      #6b6c6d;
+    --clr-grey-light:    #9ca3af;
+    --clr-success:       #16a34a;
+    --clr-danger:        #dc2626;
+    --clr-white:         #ffffff;
+    --clr-off-white:     #f8f9fa;
+    --clr-surface:       #f1f5f9;
+    --clr-border:        #e2e8f0;
+    --clr-border-dark:   #cbd5e1;
+    --clr-text:          #1e293b;
+    --clr-text-muted:    #64748b;
+    --clr-text-light:    #94a3b8;
+    --clr-black:         #0f172a;
+    --font-primary:      'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-size-xs:      0.75rem;
+    --font-size-sm:      0.875rem;
+    --font-size-base:    1rem;
+    --font-size-md:      1.125rem;
+    --font-size-lg:      1.25rem;
+    --font-size-xl:      1.5rem;
+    --font-size-2xl:     1.875rem;
+    --font-size-3xl:     2.25rem;
+    --line-height-tight: 1.2;
+    --line-height-snug:  1.4;
+    --line-height-base:  1.6;
+    --line-height-loose: 1.8;
+    --space-1:  0.25rem; --space-2:  0.5rem; --space-3:  0.75rem; --space-4:  1rem;
+    --space-5:  1.25rem; --space-6:  1.5rem; --space-8:  2rem; --space-10: 2.5rem;
+    --space-12: 3rem; --space-16: 4rem; --space-20: 5rem; --space-24: 6rem;
+    --container-max:     1200px;
+    --container-pad:     1.5rem;
+    --radius-sm:  4px; --radius-base: 8px; --radius-md: 12px; --radius-lg: 16px;
+    --radius-xl:  24px; --radius-full: 9999px;
+    --shadow-xs:   0 1px 2px rgba(0,0,0,0.05);
+    --shadow-sm:   0 2px 8px rgba(0,0,0,0.08);
+    --shadow-base: 0 4px 16px rgba(0,0,0,0.1);
+    --shadow-md:   0 8px 24px rgba(0,0,0,0.12);
+    --shadow-lg:   0 16px 40px rgba(0,0,0,0.15);
+    --shadow-blue: 0 8px 24px rgba(93,140,179,0.25);
+    --transition-fast: 0.15s ease;
+    --transition-base: 0.25s ease;
+    --transition-slow: 0.4s ease;
+    --z-base: 1; --z-dropdown: 100; --z-sticky: 200; --z-overlay: 300;
+    --header-height:     72px;
+    --announcement-height: 40px;
+}
+
+/* --- 2. RESET & BASE --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--clr-text);
+    background-color: var(--clr-white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body.announcement-visible { padding-top: calc(var(--header-height) + var(--announcement-height)); }
+body:not(.announcement-visible) { padding-top: var(--header-height); }
+img, video { max-width: 100%; height: auto; display: block; }
+a { color: var(--clr-primary); text-decoration: none; transition: color var(--transition-fast); }
+a:hover { color: var(--clr-primary-dark); }
+ul, ol { list-style: none; }
+button { cursor: pointer; font-family: var(--font-primary); border: none; background: none; }
+input, textarea, select { font-family: var(--font-primary); font-size: var(--font-size-base); }
+h1, h2, h3, h4, h5, h6 { font-weight: 800; line-height: var(--line-height-tight); color: var(--clr-navy); }
+p { margin-bottom: var(--space-4); }
+p:last-child { margin-bottom: 0; }
+address { font-style: normal; }
+
+/* --- 3. LAYOUT --- */
+.container { max-width: var(--container-max); margin: 0 auto; padding: 0 var(--container-pad); }
+
+/* --- 4. BUTTONS --- */
+.btn {
+    display: inline-flex; align-items: center; gap: var(--space-2);
+    font-weight: 700; font-size: var(--font-size-sm);
+    border-radius: var(--radius-base); transition: all var(--transition-base);
+    cursor: pointer; text-align: center; white-space: nowrap;
+    border: 2px solid transparent; text-decoration: none;
+}
+.btn--sm  { padding: var(--space-2) var(--space-5); font-size: var(--font-size-sm); }
+.btn--lg  { padding: var(--space-4) var(--space-8); font-size: var(--font-size-md); }
+.btn--primary {
+    background: var(--clr-primary); color: var(--clr-white);
+    border-color: var(--clr-primary); box-shadow: var(--shadow-blue);
+}
+.btn--primary:hover {
+    background: var(--clr-primary-dark); border-color: var(--clr-primary-dark);
+    color: var(--clr-white); transform: translateY(-1px);
+    box-shadow: 0 12px 28px rgba(93,140,179,0.35);
+}
+.btn--outline-white {
+    background: transparent; color: var(--clr-white);
+    border-color: rgba(255,255,255,0.6);
+}
+.btn--outline-white:hover {
+    background: rgba(255,255,255,0.15); border-color: var(--clr-white); color: var(--clr-white);
+}
+.btn-ol-navy {
+    display: inline-flex; align-items: center; gap: .5rem;
+    border: 2px solid #1A3E59; color: #1A3E59; background: transparent;
+    padding: .68rem 1.75rem; font-size: .76rem; font-weight: 800;
+    letter-spacing: .12em; text-transform: uppercase; text-decoration: none;
+    transition: background .2s, color .2s; white-space: nowrap;
+}
+.btn-ol-navy:hover { background: #1A3E59; color: #fff; }
+.btn-ol-white {
+    display: inline-flex; align-items: center; gap: .5rem;
+    border: 2px solid rgba(255,255,255,.8); color: #fff; background: transparent;
+    padding: .68rem 1.75rem; font-size: .76rem; font-weight: 800;
+    letter-spacing: .12em; text-transform: uppercase; text-decoration: none;
+    transition: background .2s, color .2s, border-color .2s; white-space: nowrap;
+}
+.btn-ol-white:hover { background: #fff; color: #1A3E59; border-color: #fff; }
+
+/* --- 5. ANNOUNCEMENT BAR --- */
+.announcement-bar {
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: calc(var(--z-sticky) + 10);
+    background: var(--clr-navy); color: rgba(255,255,255,0.9);
+    height: var(--announcement-height); display: flex; align-items: center;
+    transition: transform var(--transition-base);
+}
+.announcement-bar.is-hidden { transform: translateY(-100%); }
+.announcement-bar .container {
+    display: flex; align-items: center; justify-content: center;
+    gap: var(--space-4); width: 100%;
+}
+.announcement-bar__text { font-size: var(--font-size-xs); text-align: center; flex: 1; }
+.announcement-bar__text strong { color: var(--clr-white); }
+.announcement-bar__close {
+    color: rgba(255,255,255,0.7); font-size: 1.25rem; line-height: 1;
+    padding: var(--space-1) var(--space-2); border-radius: var(--radius-sm);
+    transition: all var(--transition-fast); flex-shrink: 0;
+}
+.announcement-bar__close:hover { color: var(--clr-white); background: rgba(255,255,255,0.1); }
+
+/* --- 6. SITE HEADER --- */
+.site-header {
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: var(--z-sticky); height: var(--header-height);
+    background: rgba(255,255,255,0.97);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--clr-border);
+    transition: all var(--transition-base);
+}
+.announcement-visible .site-header { top: var(--announcement-height); }
+.site-header.is-scrolled { box-shadow: var(--shadow-md); border-bottom-color: transparent; }
+.site-header .container { height: 100%; }
+.site-header__inner {
+    display: flex; align-items: center; justify-content: space-between;
+    height: 100%; gap: var(--space-6);
+}
+.site-header__logo { flex-shrink: 0; display: flex; align-items: center; }
+.site-header__logo img { height: 40px; width: auto; }
+.site-header__nav { flex: 1; display: flex; justify-content: center; }
+.nav-menu { display: flex; align-items: center; gap: var(--space-1); }
+.nav-menu__item { position: relative; }
+.nav-menu__link {
+    display: flex; align-items: center; gap: var(--space-1);
+    padding: var(--space-2) var(--space-4); font-size: var(--font-size-sm);
+    font-weight: 700; color: var(--clr-text); border-radius: var(--radius-base);
+    transition: all var(--transition-fast); white-space: nowrap; text-decoration: none;
+}
+.nav-menu__link svg { transition: transform var(--transition-fast); flex-shrink: 0; }
+.nav-menu__link:hover { color: var(--clr-primary); background: var(--clr-primary-pale); }
+.nav-dropdown {
+    position: absolute; top: calc(100% + var(--space-2)); left: 50%;
+    transform: translateX(-50%) translateY(-8px); min-width: 260px;
+    background: var(--clr-white); border: 1px solid var(--clr-border);
+    border-radius: var(--radius-md); box-shadow: var(--shadow-lg);
+    padding: var(--space-2); opacity: 0; visibility: hidden;
+    transition: all var(--transition-base); z-index: var(--z-dropdown);
+}
+.nav-menu__item--dropdown:hover .nav-dropdown,
+.nav-menu__item--dropdown:focus-within .nav-dropdown {
+    opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0);
+}
+.nav-menu__item--dropdown:hover .nav-menu__link svg { transform: rotate(180deg); }
+.nav-dropdown li a {
+    display: flex; align-items: center; gap: var(--space-3);
+    padding: var(--space-3) var(--space-4); font-size: var(--font-size-sm);
+    font-weight: 600; color: var(--clr-text); border-radius: var(--radius-base);
+    transition: all var(--transition-fast); text-decoration: none;
+}
+.nav-dropdown li a:hover { background: var(--clr-primary-pale); color: var(--clr-primary); }
+.nav-dropdown__icon {
+    width: 28px; height: 28px; border-radius: var(--radius-sm);
+    background: var(--clr-surface); flex-shrink: 0; display: inline-block;
+}
+.site-header__actions { display: flex; align-items: center; gap: var(--space-3); flex-shrink: 0; }
+.lang-switcher { display: flex; align-items: center; gap: var(--space-1); }
+.lang-switcher__btn {
+    font-size: var(--font-size-xs); font-weight: 700; letter-spacing: 0.05em;
+    color: var(--clr-text-muted); padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-sm); transition: all var(--transition-fast);
+}
+.lang-switcher__btn:hover { color: var(--clr-primary); }
+.lang-switcher__btn--active { color: var(--clr-primary); background: var(--clr-primary-pale); }
+.lang-switcher__sep { color: var(--clr-border-dark); font-size: var(--font-size-xs); }
+.hamburger {
+    display: none; flex-direction: column; justify-content: space-between;
+    width: 28px; height: 20px; padding: 0;
+}
+.mobile-nav__extras { display: none; }
+.hamburger__line {
+    display: block; height: 2px; background: var(--clr-navy);
+    border-radius: var(--radius-full); transition: all var(--transition-base); transform-origin: center;
+}
+.hamburger.is-active .hamburger__line:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+.hamburger.is-active .hamburger__line:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.is-active .hamburger__line:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+.mobile-overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.5);
+    z-index: calc(var(--z-sticky) - 1); opacity: 0; visibility: hidden;
+    transition: all var(--transition-base);
+}
+.mobile-overlay.is-active { opacity: 1; visibility: visible; }
+
+/* --- 7. NAB TICKER --- */
+.nab-ticker{display:flex;align-items:center;background:#0d1f33;height:40px;overflow:hidden;position:relative;z-index:98;border-bottom:1px solid rgba(122,174,207,.12)}
+.nab-ticker__badge{flex-shrink:0;display:flex;align-items:center;align-self:stretch;padding:0 1.2rem;background:#1A3E59;font-size:.62rem;font-weight:900;letter-spacing:.2em;text-transform:uppercase;color:#7aaecf;white-space:nowrap;border-right:1px solid rgba(122,174,207,.2);gap:.5rem}
+.nab-ticker__badge svg{opacity:.7}
+.nab-ticker__viewport{flex:1;overflow:hidden;position:relative;height:100%;display:flex;align-items:center}
+.nab-ticker__track{display:flex;align-items:center;width:max-content;will-change:transform;animation:nab-scroll 45s linear infinite;line-height:1}
+.nab-ticker__track:hover{animation-play-state:paused}
+@keyframes nab-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.nab-ticker__item{display:inline-flex;align-items:center;gap:.5rem;padding:0 2rem;white-space:nowrap;font-size:.71rem;border-right:1px solid rgba(255,255,255,.07);line-height:1}
+.nab-ticker__fund{font-weight:700;color:rgba(255,255,255,.7);letter-spacing:.02em}
+.nab-ticker__val{font-weight:800;color:#fff;font-variant-numeric:tabular-nums;letter-spacing:.01em}
+.nab-ticker__sep{color:rgba(255,255,255,.2);font-weight:300}
+.nab-ticker__chg{font-weight:800;font-size:.67rem;display:inline-flex;align-items:center;gap:.15rem}
+.nab-ticker__chg--pos{color:#34d399}
+.nab-ticker__chg--neg{color:#fc8181}
+.nab-ticker__cta{flex-shrink:0;display:flex;align-items:center;align-self:stretch;gap:.4rem;padding:0 1.1rem;font-size:.66rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#7aaecf;text-decoration:none;border-left:1px solid rgba(122,174,207,.2);white-space:nowrap;transition:color .15s,background .15s}
+.nab-ticker__cta:hover{color:#fff;background:rgba(93,140,179,.15)}
+
+/* --- 8. HERO SLIDER --- */
+.hero-slider { position: relative; width: 100%; height: 100vh; min-height: 560px; overflow: hidden; }
+.hero-slider__track { position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%; }
+.hero-slide {
+    display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    align-items: center; background-size: cover; background-position: center; background-repeat: no-repeat;
+}
+.hero-slide.is-active { display: flex; z-index: 1; animation: slideIn 0.7s ease forwards; }
+@keyframes slideIn { from { opacity: 0; } to { opacity: 1; } }
+.hero-slide--1 {
+    background: linear-gradient(135deg, rgba(10,25,40,0.92) 0%, rgba(26,62,89,0.85) 50%, rgba(15,35,55,0.90) 100%),
+    repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(93,140,179,0.04) 2px, rgba(93,140,179,0.04) 4px);
+    background-color: #0a1928;
+}
+.hero-slide--2 {
+    background: linear-gradient(160deg, rgba(18,44,63,0.93) 0%, rgba(36,79,112,0.88) 60%, rgba(10,25,40,0.93) 100%),
+    repeating-linear-gradient(-45deg, transparent, transparent 3px, rgba(93,140,179,0.03) 3px, rgba(93,140,179,0.03) 6px);
+    background-color: #121c28;
+}
+.hero-slide--3 {
+    background: linear-gradient(120deg, rgba(20,50,75,0.92) 0%, rgba(110,66,36,0.25) 100%),
+    linear-gradient(180deg, rgba(10,25,40,0.95) 0%, rgba(26,62,89,0.88) 100%);
+    background-color: #0f1e2d;
+}
+.hero-slide::before {
+    content: ''; position: absolute; right: 0; top: 0; bottom: 0; width: 45%;
+    background: linear-gradient(135deg, rgba(93,140,179,0.08) 0%, rgba(93,140,179,0.02) 100%);
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+}
+.hero-slide__overlay { display: none; }
+.hero-slide .container { position: relative; z-index: 2; width: 100%; }
+.hero-slide__content { max-width: 680px; padding: 0; }
+.hero-slide__split-img{position:absolute;right:0;top:0;bottom:0;width:50%;z-index:1;pointer-events:none;clip-path:polygon(10% 0%,100% 0%,100% 100%,0% 100%)}
+.hero-slide__split-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.5) saturate(.65)}
+.hero-slide__split-img::before{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(10,25,40,1) 0%,rgba(10,25,40,.55) 38%,rgba(10,25,40,.08) 100%);z-index:1}
+.hero-slide__eyebrow {
+    display: inline-block; font-size: var(--font-size-xs); font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase; color: var(--clr-primary-light);
+    background: rgba(93,140,179,0.15); border: 1px solid rgba(93,140,179,0.3);
+    padding: var(--space-1) var(--space-4); border-radius: var(--radius-full);
+    margin-bottom: var(--space-5);
+}
+.hero-slide__title {
+    font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; color: var(--clr-white);
+    line-height: 1.15; letter-spacing: -0.02em; margin-bottom: var(--space-5);
+}
+.hero-slide__desc {
+    font-size: var(--font-size-md); color: rgba(255,255,255,0.75);
+    line-height: var(--line-height-loose); max-width: 560px; margin-bottom: var(--space-8);
+}
+.hero-slide__actions { display: flex; gap: var(--space-4); flex-wrap: wrap; }
+.hero-slider__btn {
+    position: absolute; top: 50%; transform: translateY(-50%); z-index: 10;
+    width: 44px; height: 44px; background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2); border-radius: 50%;
+    color: var(--clr-white); display: flex; align-items: center; justify-content: center;
+    transition: all var(--transition-base); cursor: pointer;
+}
+.hero-slider__btn:hover { background: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.4); }
+.hero-slider__btn--prev { left: var(--space-6); }
+.hero-slider__btn--next { right: var(--space-6); }
+.hero-slider__dots {
+    position: absolute; bottom: var(--space-8); left: 50%; transform: translateX(-50%);
+    display: flex; gap: var(--space-2); z-index: 10;
+}
+.hero-dot {
+    width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.35);
+    border: none; cursor: pointer; transition: all var(--transition-base); padding: 0;
+}
+.hero-dot.is-active { background: var(--clr-white); width: 28px; border-radius: var(--radius-full); }
+
+/* --- 9. TRUST STRIP --- */
+.trust-strip{background:#1A3E59;padding:1.6rem 0}
+.trust-strip__inner{display:flex;align-items:center;justify-content:center;flex-wrap:nowrap;gap:0;width:100%}
+.trust-strip__item{display:flex;flex-direction:column;align-items:center;padding:.75rem 3.5rem;gap:.2rem;text-align:center;flex:1}
+.trust-strip__item strong{font-size:1.55rem;font-weight:900;color:#fff;line-height:1;font-variant-numeric:tabular-nums}
+.trust-strip__item span{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);line-height:1.3}
+.trust-strip__div{width:1px;height:44px;background:rgba(255,255,255,.18);flex-shrink:0}
+
+/* --- 10. PRODUK UNGGULAN --- */
+.produk-premium-section{background:#fff;padding:5.5rem 0 5rem;position:relative;overflow:hidden}
+.produk-premium-section::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(to right,var(--clr-brown) 0%,#1A3E59 60%,transparent 100%)}
+.pp-head{text-align:center;margin-bottom:3.25rem}
+.pp-head__eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.67rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--clr-brown);margin-bottom:.9rem}
+.pp-head__eyebrow::before,.pp-head__eyebrow::after{content:'';width:24px;height:1.5px;background:var(--clr-brown);opacity:.5}
+.pp-head__title{font-size:clamp(1.7rem,3vw,2.3rem);font-weight:900;color:#1A3E59;letter-spacing:.02em;line-height:1.15;margin-bottom:.55rem}
+.pp-head__title em{font-style:normal;color:var(--clr-brown)}
+.pp-head__sub{font-size:.93rem;color:#7a95a8;margin-top:.2rem}
+.pp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+.pp-card{
+    background:#fff;border:1px solid #e0eaf2;border-radius:16px;
+    display:flex;flex-direction:column;text-decoration:none;color:inherit;
+    overflow:hidden;box-shadow:0 2px 12px rgba(26,62,89,.06);
+    transition:transform .25s,box-shadow .25s,border-color .25s
+}
+.pp-card:hover{transform:translateY(-7px);border-color:#5d8cb3;box-shadow:0 18px 44px rgba(26,62,89,.13)}
+.pp-card__header{
+    height:180px;display:flex;align-items:flex-end;justify-content:flex-start;
+    position:relative;overflow:hidden;padding:1.25rem 1.5rem;background:#0d1a2e
+}
+.pp-card__header-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.58) saturate(.75)}
+.pp-card__header::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(8,16,30,.18) 0%,rgba(8,16,30,.62) 100%);z-index:1}
+.pp-card__header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:70px;background:linear-gradient(to top,rgba(8,16,30,.7) 0%,transparent 100%);z-index:1}
+.pp-card__header-label{position:relative;z-index:2;font-size:.6rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.9);background:rgba(0,0,0,.3);padding:.22rem .7rem;border-radius:999px;border:1px solid rgba(255,255,255,.22)}
+.pp-card__body{padding:1.4rem 1.5rem;display:flex;flex-direction:column;flex:1}
+.pp-card__cat{font-size:.6rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:#5d8cb3;margin-bottom:.45rem}
+.pp-card__name{font-size:.98rem;font-weight:800;color:#1A3E59;line-height:1.3;margin-bottom:.6rem}
+.pp-card__desc{font-size:.81rem;color:#6b849a;line-height:1.7;flex:1;margin-bottom:1.2rem}
+.pp-card__meta{display:flex;align-items:center;gap:.5rem;margin-bottom:1.1rem;flex-wrap:wrap}
+.pp-card__risk-pill{display:inline-flex;align-items:center;gap:.3rem;font-size:.62rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.25rem .65rem;border-radius:999px;border:1px solid}
+.pp-card__risk-pill--rendah{color:#0d7a4e;border-color:rgba(13,122,78,.25);background:rgba(13,122,78,.07)}
+.pp-card__risk-pill--menengah{color:var(--clr-brown-dark);border-color:rgba(196,123,43,.3);background:rgba(196,123,43,.08)}
+.pp-card__risk-pill--tinggi{color:#b91c1c;border-color:rgba(185,28,28,.25);background:rgba(185,28,28,.07)}
+.pp-card__risk-dot{width:5px;height:5px;border-radius:50%;background:currentColor}
+.pp-card__btn{display:flex;align-items:center;justify-content:center;gap:.45rem;width:100%;padding:.65rem 1rem;border-radius:8px;font-size:.75rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;border:1.5px solid #d1dfe9;color:#1A3E59;background:transparent;transition:background .2s,color .2s,border-color .2s;margin-top:auto}
+.pp-card:hover .pp-card__btn{background:#1A3E59;border-color:#1A3E59;color:#fff}
+.pp-card__btn svg{transition:transform .2s}
+.pp-card:hover .pp-card__btn svg{transform:translateX(3px)}
+.pp-footer{text-align:center;margin-top:2.5rem}
+
+/* --- 11. PANDUAN SPLIT --- */
+.panduan-split{display:grid;grid-template-columns:1fr 1fr;min-height:460px}
+.panduan-split__photo{background:url('https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=900&q=80') center/cover no-repeat;min-height:300px}
+.panduan-split__body{background:#f2f7fb;display:flex;flex-direction:column;justify-content:center;padding:3.5rem clamp(2.5rem,6vw,6rem)}
+.panduan-split__eyebrow{display:block;font-size:.67rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:#5d8cb3;margin-bottom:1rem}
+.panduan-split__title{font-size:clamp(1.45rem,2.8vw,2.1rem);font-weight:800;color:#1A3E59;line-height:1.25;margin-bottom:1rem}
+.panduan-split__desc{font-size:.93rem;color:#5c7588;line-height:1.75;margin-bottom:2rem;max-width:400px}
+
+/* --- 12. SIMULASI KALKULATOR --- */
+.kalkulator-photo{position:relative;min-height:460px;background:url('https://images.unsplash.com/photo-1588702547923-7408f330d4f3?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;display:flex;align-items:center}
+.kalkulator-photo::before{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(6,16,32,.92) 50%,rgba(6,16,32,.65) 100%)}
+.kalkulator-photo .container{position:relative;z-index:1;width:100%}
+.kalkulator-photo__inner{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;padding:4rem 0}
+.kalkulator-photo__visual{display:flex;align-items:center;justify-content:center}
+.calc-visual{position:relative;width:200px;height:200px;flex-shrink:0}
+.calc-visual__ring{width:200px;height:200px;border-radius:50%;border:1.5px solid rgba(122,174,207,.25);display:flex;align-items:center;justify-content:center;position:relative}
+.calc-visual__ring::before{content:'';position:absolute;inset:16px;border-radius:50%;border:1px solid rgba(122,174,207,.15)}
+.calc-visual__bg{width:130px;height:130px;border-radius:50%;background:rgba(93,140,179,.18);border:1px solid rgba(122,174,207,.3);display:flex;align-items:center;justify-content:center}
+.calc-visual__icon{color:#7aaecf;opacity:.95}
+.calc-badge{position:absolute;display:flex;align-items:center;gap:.45rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(8px);border-radius:999px;padding:.35rem .85rem;font-size:.68rem;font-weight:800;color:#fff;white-space:nowrap}
+.calc-badge--tl{top:10px;left:-20px}
+.calc-badge--br{bottom:10px;right:-24px}
+.calc-badge__dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.calc-badge__dot--green{background:#34d399}
+.calc-badge__dot--blue{background:#7aaecf}
+.kalkulator-photo__eyebrow{display:block;font-size:.67rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:#7aaecf;margin-bottom:1rem}
+.kalkulator-photo__title{font-size:clamp(1.45rem,2.8vw,2.1rem);font-weight:800;color:#fff;line-height:1.25;margin-bottom:1rem}
+.kalkulator-photo__desc{font-size:.93rem;color:rgba(255,255,255,.7);line-height:1.75;margin-bottom:2rem}
+
+/* --- 13. BERITA --- */
+.news-section{background:#fff;padding:4.5rem 0}
+.news-main{display:grid;grid-template-columns:200px 1fr;gap:3rem;align-items:start}
+.news-main__title{font-size:clamp(1.4rem,2.5vw,1.85rem);font-weight:900;color:#1A3E59;margin-bottom:.5rem;line-height:1.2}
+.news-main__head p{font-size:.9rem;color:#6b849a;line-height:1.6;margin-bottom:1.5rem}
+.news-cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.news-card{display:flex;flex-direction:column;border:1px solid #e4edf5;border-radius:4px;overflow:hidden;background:#fff;text-decoration:none;color:inherit}
+.news-card__img-wrap{display:block;aspect-ratio:16/9;overflow:hidden;background:#dde8f0}
+.news-card__img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.news-card:hover .news-card__img{transform:scale(1.04)}
+.news-card__body{padding:1.25rem;display:flex;flex-direction:column;flex:1}
+.news-card__meta{display:flex;align-items:center;gap:.6rem;margin-bottom:.65rem}
+.news-card__date{font-size:.72rem;color:#8fa5b8;font-weight:600}
+.news-card__cat{font-size:.65rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#5d8cb3;background:#eef4fa;padding:.15rem .5rem;border-radius:2px}
+.news-card__title{font-size:.92rem;font-weight:800;color:#1A3E59;line-height:1.45;margin-bottom:.6rem;flex:1}
+.news-card__title a{text-decoration:none;color:inherit}
+.news-card__title a:hover{color:#5d8cb3}
+.news-card__excerpt{font-size:.82rem;color:#6b849a;line-height:1.6;margin-bottom:.85rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.news-card__link{display:inline-flex;align-items:center;gap:.35rem;font-size:.76rem;font-weight:700;color:#1A3E59;text-decoration:none;margin-top:auto}
+.news-card__link:hover{color:#5d8cb3}
+
+/* --- 14. FOOTER --- */
+.site-footer { background: var(--clr-black); color: rgba(255,255,255,0.8); }
+.footer-main { padding: var(--space-16) 0 var(--space-12); border-bottom: 1px solid rgba(255,255,255,0.08); }
+.footer-grid { display: grid; grid-template-columns: 2fr 1.5fr 1.5fr 2fr; gap: var(--space-10); }
+.footer-brand__logo img { height: 36px; width: auto; filter: brightness(0) invert(1); }
+.footer-brand__tagline {
+    font-size: var(--font-size-xs); font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--clr-primary-light); margin: var(--space-4) 0 var(--space-3);
+}
+.footer-brand__desc { font-size: var(--font-size-sm); color: rgba(255,255,255,0.6); line-height: var(--line-height-loose); margin-bottom: var(--space-6); }
+.footer-social { display: flex; gap: var(--space-2); }
+.footer-social__link {
+    width: 36px; height: 36px; background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-base);
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,0.6); transition: all var(--transition-fast);
+}
+.footer-social__link:hover { background: var(--clr-primary); border-color: var(--clr-primary); color: var(--clr-white); transform: translateY(-2px); }
+.footer-nav__title {
+    font-size: var(--font-size-xs); font-weight: 800; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--clr-white); margin-bottom: var(--space-5);
+}
+.footer-nav__title--mt { margin-top: var(--space-8); }
+.footer-nav__list li { margin-bottom: var(--space-3); }
+.footer-nav__list a { font-size: var(--font-size-sm); color: rgba(255,255,255,0.6); transition: color var(--transition-fast); text-decoration: none; }
+.footer-nav__list a:hover { color: var(--clr-white); }
+.footer-contact__address { display: flex; flex-direction: column; gap: var(--space-4); margin-bottom: var(--space-6); }
+.footer-contact__item {
+    display: flex; align-items: flex-start; gap: var(--space-3);
+    font-size: var(--font-size-sm); color: rgba(255,255,255,0.6); line-height: var(--line-height-snug);
+}
+.footer-contact__icon { flex-shrink: 0; color: var(--clr-primary-light); margin-top: 2px; }
+.footer-contact__item a { color: rgba(255,255,255,0.6); transition: color var(--transition-fast); text-decoration: none; }
+.footer-contact__item a:hover { color: var(--clr-white); }
+.footer-contact__cta { width: 100%; justify-content: center; }
+.footer-ojk { background: rgba(255,255,255,0.03); border-bottom: 1px solid rgba(255,255,255,0.08); padding: var(--space-6) 0; }
+.footer-ojk__inner { display: flex; align-items: flex-start; gap: var(--space-8); }
+.footer-ojk__badge { display: flex; align-items: center; gap: var(--space-3); flex-shrink: 0; }
+.footer-ojk__badge > div strong { display: block; font-size: var(--font-size-sm); color: var(--clr-white); font-weight: 700; }
+.footer-ojk__badge > div span { display: block; font-size: var(--font-size-xs); color: rgba(255,255,255,0.5); }
+.footer-ojk__disclaimer { font-size: var(--font-size-xs); color: rgba(255,255,255,0.5); line-height: var(--line-height-loose); flex: 1; margin: 0; }
+.footer-ojk__disclaimer strong { color: rgba(255,255,255,0.8); }
+.footer-ojk__parent { flex-shrink: 0; text-align: center; border-left: 1px solid rgba(255,255,255,0.08); padding-left: var(--space-8); }
+.footer-ojk__parent span { display: block; font-size: var(--font-size-xs); color: rgba(255,255,255,0.5); margin-bottom: var(--space-1); }
+.footer-ojk__parent strong { font-size: var(--font-size-sm); color: var(--clr-white); font-weight: 800; }
+.footer-bottom { padding: var(--space-5) 0; }
+.footer-bottom__inner { display: flex; justify-content: space-between; align-items: center; gap: var(--space-4); }
+.footer-bottom__copy { font-size: var(--font-size-xs); color: rgba(255,255,255,0.4); margin: 0; }
+.footer-bottom__links { display: flex; gap: var(--space-5); }
+.footer-bottom__links a { font-size: var(--font-size-xs); color: rgba(255,255,255,0.4); transition: color var(--transition-fast); text-decoration: none; }
+.footer-bottom__links a:hover { color: rgba(255,255,255,0.8); }
+
+/* --- 15. RESPONSIVE --- */
+@media(max-width:1100px){
+    .pp-grid{grid-template-columns:repeat(2,1fr)}
+    .hero-slide__split-img{width:44%;clip-path:polygon(12% 0%,100% 0%,100% 100%,0% 100%)}
+}
+@media(max-width:900px){
+    .panduan-split{grid-template-columns:1fr}
+    .panduan-split__photo{min-height:280px}
+    .kalkulator-photo__inner{grid-template-columns:1fr}
+    .kalkulator-photo__visual{display:none}
+    .news-main{grid-template-columns:1fr}
+    .pp-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+    :root { --header-height: 64px; --announcement-height: 48px; --container-pad: 1rem; }
+    .site-header__inner { gap: var(--space-3); }
+    .site-header__logo img { height: 32px; max-width: 140px; }
+    .site-header__actions { gap: var(--space-2); }
+    .site-header__actions .btn--sm { display: none; }
+    .site-header__actions .lang-switcher { display: none; }
+    .hamburger { display: flex; }
+    .site-header__nav {
+        position: fixed; top: 0; right: -320px; width: 300px; height: 100vh;
+        background: var(--clr-white); box-shadow: var(--shadow-lg);
+        padding: calc(var(--header-height) + var(--space-6)) var(--space-6) var(--space-6);
+        overflow-y: auto; transition: right var(--transition-base);
+        z-index: calc(var(--z-sticky) + 5); flex-direction: column; justify-content: flex-start;
+        display: flex;
+    }
+    .site-header__nav.is-open { right: 0; }
+    .nav-menu { flex-direction: column; align-items: stretch; gap: 0; }
+    .nav-menu__link {
+        padding: var(--space-4); justify-content: space-between;
+        border-bottom: 1px solid var(--clr-border); border-radius: 0;
+    }
+    .nav-dropdown {
+        position: static; transform: none !important; opacity: 1 !important;
+        visibility: visible !important; box-shadow: none; border: none;
+        padding: 0; max-height: 0; overflow: hidden; transition: max-height var(--transition-base);
+    }
+    .nav-menu__item--dropdown.is-open .nav-dropdown { max-height: 600px; }
+    .nav-dropdown li a { padding: var(--space-3) var(--space-4) var(--space-3) var(--space-8); border-radius: 0; }
+    .mobile-nav__extras { display: flex; flex-direction: column; gap: 1rem; padding: 1.5rem 0 0; border-top: 1px solid var(--clr-border); margin-top: 1rem; }
+    .mobile-nav__extras .lang-switcher--mobile { display: flex; }
+    .btn--mobile-cta { display: flex; justify-content: center; width: 100%; padding: .75rem 1rem; font-size: .85rem; }
+    .hero-slider { height: 100svh; min-height: 500px; }
+    .hero-slider__btn { display: none; }
+    .hero-slide__title { font-size: clamp(1.6rem, 6vw, 2.4rem); }
+    .hero-slide__desc { font-size: var(--font-size-base); }
+    .hero-slide__actions { flex-direction: column; align-items: flex-start; }
+    .hero-slide__split-img{display:none}
+    .news-cards-grid{grid-template-columns:1fr}
+    .trust-strip__inner{display:grid;grid-template-columns:1fr 1fr;gap:0}
+    .trust-strip__div{display:none}
+    .trust-strip__item{padding:.9rem 1rem;border-bottom:1px solid rgba(255,255,255,.1)}
+    .trust-strip__item:nth-child(odd){border-right:1px solid rgba(255,255,255,.1)}
+    .pp-card__header{height:150px}
+    .footer-grid { grid-template-columns: 1fr; gap: var(--space-8); }
+    .footer-ojk__inner { flex-direction: column; gap: var(--space-5); }
+    .footer-ojk__parent { border-left: none; border-top: 1px solid rgba(255,255,255,0.08); padding-left: 0; padding-top: var(--space-5); text-align: left; }
+    .footer-bottom__inner { flex-direction: column; text-align: center; gap: var(--space-3); }
+    .footer-bottom__links { justify-content: center; }
+    .announcement-bar__text { font-size: 0.65rem; }
+}
+@media(max-width:520px){
+    .pp-grid{grid-template-columns:1fr}
+    .pp-card__header{height:140px}
+}
+@media(max-width:480px){
+    :root { --container-pad: 1rem; }
+    .hero-slide__actions .btn { width: 100%; justify-content: center; }
+    .site-header__logo img { height: 28px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="announcement-bar" id="announcementBar">
+    <div class="container">
+        <span class="announcement-bar__text">
+            PT Korea Investment Management Indonesia terdaftar dan diawasi oleh
+            <strong>Otoritas Jasa Keuangan (OJK)</strong>
+        </span>
+        <button class="announcement-bar__close" id="closeAnnouncement" aria-label="Tutup">&times;</button>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+    <div class="container">
+        <div class="site-header__inner">
+
+            <!-- Logo -->
+            <a href="homepage-preview.html" class="site-header__logo" aria-label="Korea Investment Management Indonesia - Home">
+                <img src="https://koreainvestment.co.id/bundle/default/images/icon/logo-koreainvestment.png"
+                     alt="Korea Investment Management Indonesia"
+                     width="180" height="45"
+                     loading="eager">
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="site-header__nav" id="primaryNav" aria-label="Primary Navigation">
+                <ul class="nav-menu">
+                    <li class="nav-menu__item">
+                        <a href="404.html" class="nav-menu__link">Tentang Kami</a>
+                    </li>
+                    <li class="nav-menu__item nav-menu__item--dropdown">
+                        <a href="404.html" class="nav-menu__link nav-menu__link--has-children">
+                            Produk
+                            <svg width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        </a>
+                        <ul class="nav-dropdown">
+                            <li><a href="404.html"><span class="nav-dropdown__icon"></span>Reksa Dana Pasar Uang</a></li>
+                            <li><a href="404.html"><span class="nav-dropdown__icon"></span>Reksa Dana Pendapatan Tetap</a></li>
+                            <li><a href="404.html"><span class="nav-dropdown__icon"></span>Reksa Dana Campuran</a></li>
+                            <li><a href="404.html"><span class="nav-dropdown__icon"></span>Reksa Dana Saham</a></li>
+                            <li><a href="404.html"><span class="nav-dropdown__icon"></span>Reksa Dana Terproteksi</a></li>
+                            <li><a href="404.html"><span class="nav-dropdown__icon"></span>Reksa Dana ETF</a></li>
+                            <li><a href="404.html"><span class="nav-dropdown__icon"></span>Reksa Dana Global Syariah</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-menu__item nav-menu__item--dropdown">
+                        <a href="404.html" class="nav-menu__link nav-menu__link--has-children">
+                            Cara Berinvestasi
+                            <svg width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                        </a>
+                        <ul class="nav-dropdown">
+                            <li><a href="404.html">Cara Beli dan Jual</a></li>
+                            <li><a href="404.html">Mitra Distribusi</a></li>
+                            <li><a href="404.html">Download Formulir</a></li>
+                            <li><a href="404.html">Pertanyaan Umum</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-menu__item">
+                        <a href="blog.html" class="nav-menu__link">Info</a>
+                    </li>
+                    <li class="nav-menu__item">
+                        <a href="404.html" class="nav-menu__link">Hubungi Kami</a>
+                    </li>
+                </ul>
+
+                <!-- Mobile-only extras -->
+                <div class="mobile-nav__extras">
+                    <div class="lang-switcher lang-switcher--mobile" aria-label="Pilih Bahasa">
+                        <button class="lang-switcher__btn lang-switcher__btn--active" data-lang="id">ID</button>
+                        <span class="lang-switcher__sep">|</span>
+                        <button class="lang-switcher__btn" data-lang="en">EN</button>
+                    </div>
+                    <a href="404.html" class="btn btn--primary btn--mobile-cta">Mulai Investasi</a>
+                </div>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="site-header__actions">
+                <div class="lang-switcher" aria-label="Pilih Bahasa">
+                    <button class="lang-switcher__btn lang-switcher__btn--active" data-lang="id">ID</button>
+                    <span class="lang-switcher__sep">|</span>
+                    <button class="lang-switcher__btn" data-lang="en">EN</button>
+                </div>
+                <a href="404.html" class="btn btn--primary btn--sm">Mulai Investasi</a>
+                <button class="hamburger" id="menuToggle" aria-label="Buka Menu" aria-expanded="false" aria-controls="primaryNav">
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<!-- Mobile Menu Overlay -->
+<div class="mobile-overlay" id="mobileOverlay"></div>
+
+<!-- NAB / UNIT TICKER -->
+<div class="nab-ticker" role="region" aria-label="NAB per unit reksa dana">
+    <div class="nab-ticker__badge">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        NAB / UNIT
+    </div>
+    <div class="nab-ticker__viewport">
+        <div class="nab-ticker__track" id="nabTrack">
+            <span class="nab-ticker__item"><span class="nab-ticker__fund">KIM MONEY MARKET FUND</span><span class="nab-ticker__sep">|</span><span class="nab-ticker__val">2.145,89</span><span class="nab-ticker__chg nab-ticker__chg--pos">&#9650; +0,05%</span></span>
+            <span class="nab-ticker__item"><span class="nab-ticker__fund">KIM FIXED INCOME FUND</span><span class="nab-ticker__sep">|</span><span class="nab-ticker__val">1.872,34</span><span class="nab-ticker__chg nab-ticker__chg--pos">&#9650; +0,08%</span></span>
+            <span class="nab-ticker__item"><span class="nab-ticker__fund">KIM EQUITY FUND</span><span class="nab-ticker__sep">|</span><span class="nab-ticker__val">3.201,56</span><span class="nab-ticker__chg nab-ticker__chg--pos">&#9650; +0,23%</span></span>
+            <span class="nab-ticker__item"><span class="nab-ticker__fund">KISI IDX30 ETF</span><span class="nab-ticker__sep">|</span><span class="nab-ticker__val">895,3451</span><span class="nab-ticker__chg nab-ticker__chg--pos">&#9650; +0,12%</span></span>
+            <span class="nab-ticker__item"><span class="nab-ticker__fund">KISI IDX VALUE30 ETF</span><span class="nab-ticker__sep">|</span><span class="nab-ticker__val">756,210</span><span class="nab-ticker__chg nab-ticker__chg--neg">&#9660; -0,04%</span></span>
+            <span class="nab-ticker__item"><span class="nab-ticker__fund">KIM BALANCED FUND</span><span class="nab-ticker__sep">|</span><span class="nab-ticker__val">1.456,32</span><span class="nab-ticker__chg nab-ticker__chg--pos">&#9650; +0,15%</span></span>
+            <span class="nab-ticker__item"><span class="nab-ticker__fund">KISI EKUITAS SYARIAH GLOBAL</span><span class="nab-ticker__sep">|</span><span class="nab-ticker__val">1.834,67</span><span class="nab-ticker__chg nab-ticker__chg--pos">&#9650; +0,09%</span></span>
+            <!-- Duplicate for infinite scroll -->
+            <span class="nab-ticker__item"><span class="nab-ticker__fund">KIM MONEY MARKET FUND</span><span class="nab-ticker__sep">|</span><span class="nab-ticker__val">2.145,89</span><span class="nab-ticker__chg nab-ticker__chg--pos">&#9650; +0,05%</span></span>
+            <span class="nab-ticker__item"><span class="nab-ticker__fund">KIM FIXED INCOME FUND</span><span class="nab-ticker__sep">|</span><span class="nab-ticker__val">1.872,34</span><span class="nab-ticker__chg nab-ticker__chg--pos">&#9650; +0,08%</span></span>
+            <span class="nab-ticker__item"><span class="nab-ticker__fund">KIM EQUITY FUND</span><span class="nab-ticker__sep">|</span><span class="nab-ticker__val">3.201,56</span><span class="nab-ticker__chg nab-ticker__chg--pos">&#9650; +0,23%</span></span>
+            <span class="nab-ticker__item"><span class="nab-ticker__fund">KISI IDX30 ETF</span><span class="nab-ticker__sep">|</span><span class="nab-ticker__val">895,3451</span><span class="nab-ticker__chg nab-ticker__chg--pos">&#9650; +0,12%</span></span>
+            <span class="nab-ticker__item"><span class="nab-ticker__fund">KISI IDX VALUE30 ETF</span><span class="nab-ticker__sep">|</span><span class="nab-ticker__val">756,210</span><span class="nab-ticker__chg nab-ticker__chg--neg">&#9660; -0,04%</span></span>
+            <span class="nab-ticker__item"><span class="nab-ticker__fund">KIM BALANCED FUND</span><span class="nab-ticker__sep">|</span><span class="nab-ticker__val">1.456,32</span><span class="nab-ticker__chg nab-ticker__chg--pos">&#9650; +0,15%</span></span>
+            <span class="nab-ticker__item"><span class="nab-ticker__fund">KISI EKUITAS SYARIAH GLOBAL</span><span class="nab-ticker__sep">|</span><span class="nab-ticker__val">1.834,67</span><span class="nab-ticker__chg nab-ticker__chg--pos">&#9650; +0,09%</span></span>
+        </div>
+    </div>
+    <a href="404.html" class="nab-ticker__cta">
+        Lihat Grafik
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+</div>
+
+<main id="main-content" class="site-main">
+
+<!-- HERO SLIDER -->
+<section class="hero-slider" aria-label="Hero">
+    <div class="hero-slider__track" id="heroTrack">
+
+        <div class="hero-slide hero-slide--1 is-active">
+            <div class="hero-slide__overlay"></div>
+            <div class="hero-slide__split-img" aria-hidden="true">
+                <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=1200&q=80" alt="" loading="lazy">
+            </div>
+            <div class="container">
+                <div class="hero-slide__content">
+                    <p class="hero-slide__eyebrow">Manajer Investasi Terdaftar OJK</p>
+                    <h1 class="hero-slide__title">Investasi Cerdas,<br>Masa Depan Terjamin.</h1>
+                    <p class="hero-slide__desc">KISI Asset Management mengelola Dana Kelolaan Rp 1,15 Triliun dengan tim profesional berpengalaman 15+ tahun, didukung jaringan global Korea Investment Holdings.</p>
+                    <div class="hero-slide__actions">
+                        <a href="404.html" class="btn btn--primary btn--lg">Mulai Berinvestasi</a>
+                        <a href="404.html" class="btn btn--outline-white btn--lg">Lihat Produk</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-slide hero-slide--2">
+            <div class="hero-slide__overlay"></div>
+            <div class="hero-slide__split-img" aria-hidden="true">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80" alt="" loading="lazy">
+            </div>
+            <div class="container">
+                <div class="hero-slide__content">
+                    <p class="hero-slide__eyebrow">Dana Kelolaan Rp 1,15 Triliun</p>
+                    <h1 class="hero-slide__title">Pengelolaan Aset<br>Berstandar Global.</h1>
+                    <p class="hero-slide__desc">Didukung oleh Korea Investment Holdings dengan AUM global lebih dari USD 300 Miliar. Standar riset dan kepatuhan kelas dunia untuk setiap keputusan investasi Anda.</p>
+                    <div class="hero-slide__actions">
+                        <a href="404.html" class="btn btn--primary btn--lg">Tentang Kami</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-slide hero-slide--3">
+            <div class="hero-slide__overlay"></div>
+            <div class="hero-slide__split-img" aria-hidden="true">
+                <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80" alt="" loading="lazy">
+            </div>
+            <div class="container">
+                <div class="hero-slide__content">
+                    <p class="hero-slide__eyebrow">5 Penghargaan Best Mutual Fund 2025</p>
+                    <h1 class="hero-slide__title">Reksa Dana Terbaik,<br>Diakui Industri.</h1>
+                    <p class="hero-slide__desc">Meraih 5 penghargaan bergengsi dari Infovesta Fund Awards, Bisnis Indonesia, dan Investor Awards 2025. Konsistensi kinerja di setiap kondisi pasar.</p>
+                    <div class="hero-slide__actions">
+                        <a href="404.html" class="btn btn--primary btn--lg">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <button class="hero-slider__btn hero-slider__btn--prev" id="heroPrev" aria-label="Slide sebelumnya">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <button class="hero-slider__btn hero-slider__btn--next" id="heroNext" aria-label="Slide berikutnya">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+    <div class="hero-slider__dots" id="heroDots" role="tablist" aria-label="Slider navigation">
+        <button class="hero-dot is-active" role="tab" aria-selected="true" data-slide="0" aria-label="Slide 1"></button>
+        <button class="hero-dot" role="tab" aria-selected="false" data-slide="1" aria-label="Slide 2"></button>
+        <button class="hero-dot" role="tab" aria-selected="false" data-slide="2" aria-label="Slide 3"></button>
+    </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="trust-strip" aria-label="Statistik perusahaan">
+    <div class="container">
+        <div class="trust-strip__inner">
+            <div class="trust-strip__item">
+                <strong>Rp 1,15 T</strong>
+                <span>Dana Kelolaan (AUM)</span>
+            </div>
+            <div class="trust-strip__div" aria-hidden="true"></div>
+            <div class="trust-strip__item">
+                <strong>20+</strong>
+                <span>Tahun Pengalaman</span>
+            </div>
+            <div class="trust-strip__div" aria-hidden="true"></div>
+            <div class="trust-strip__item">
+                <strong>17+</strong>
+                <span>Mitra Distribusi</span>
+            </div>
+            <div class="trust-strip__div" aria-hidden="true"></div>
+            <div class="trust-strip__item">
+                <strong>5</strong>
+                <span>Penghargaan 2025</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PRODUK UNGGULAN -->
+<section class="produk-premium-section" id="produk" aria-labelledby="pp-heading">
+    <div class="container">
+        <div class="pp-head">
+            <div class="pp-head__eyebrow">KISI Asset Management</div>
+            <h2 class="pp-head__title" id="pp-heading">PRODUK <em>UNGGULAN</em></h2>
+            <p class="pp-head__sub">Rekomendasi Investasi produk Reksa Dana Anda.</p>
+        </div>
+
+        <div class="pp-grid">
+
+            <!-- Card 1: Pasar Uang -->
+            <a href="404.html" class="pp-card">
+                <div class="pp-card__header">
+                    <img class="pp-card__header-img" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy">
+                    <span class="pp-card__header-label">PASAR UANG</span>
+                </div>
+                <div class="pp-card__body">
+                    <p class="pp-card__cat">PASAR UANG</p>
+                    <h3 class="pp-card__name">KIM Money Market Fund</h3>
+                    <p class="pp-card__desc">Menghasilkan pertumbuhan nilai investasi yang menarik dengan likuiditas yang tinggi.</p>
+                    <div class="pp-card__meta">
+                        <span class="pp-card__risk-pill pp-card__risk-pill--rendah">
+                            <span class="pp-card__risk-dot"></span>Risiko Rendah
+                        </span>
+                    </div>
+                    <span class="pp-card__btn">
+                        Selengkapnya
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </span>
+                </div>
+            </a>
+
+            <!-- Card 2: Pendapatan Tetap -->
+            <a href="404.html" class="pp-card">
+                <div class="pp-card__header">
+                    <img class="pp-card__header-img" src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy">
+                    <span class="pp-card__header-label">PENDAPATAN TETAP</span>
+                </div>
+                <div class="pp-card__body">
+                    <p class="pp-card__cat">PENDAPATAN TETAP</p>
+                    <h3 class="pp-card__name">KIM Fixed Income Fund</h3>
+                    <p class="pp-card__desc">Menghasilkan pertumbuhan nilai investasi yang optimal melalui investasi surat hutang.</p>
+                    <div class="pp-card__meta">
+                        <span class="pp-card__risk-pill pp-card__risk-pill--menengah">
+                            <span class="pp-card__risk-dot"></span>Risiko Menengah
+                        </span>
+                    </div>
+                    <span class="pp-card__btn">
+                        Selengkapnya
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </span>
+                </div>
+            </a>
+
+            <!-- Card 3: Saham -->
+            <a href="404.html" class="pp-card">
+                <div class="pp-card__header">
+                    <img class="pp-card__header-img" src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy">
+                    <span class="pp-card__header-label">SAHAM</span>
+                </div>
+                <div class="pp-card__body">
+                    <p class="pp-card__cat">SAHAM</p>
+                    <h3 class="pp-card__name">KIM Equity Fund</h3>
+                    <p class="pp-card__desc">Menghasilkan pertumbuhan nilai investasi yang maksimal dalam jangka panjang.</p>
+                    <div class="pp-card__meta">
+                        <span class="pp-card__risk-pill pp-card__risk-pill--tinggi">
+                            <span class="pp-card__risk-dot"></span>Risiko Tinggi
+                        </span>
+                    </div>
+                    <span class="pp-card__btn">
+                        Selengkapnya
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </span>
+                </div>
+            </a>
+
+            <!-- Card 4: ETF -->
+            <a href="404.html" class="pp-card">
+                <div class="pp-card__header">
+                    <img class="pp-card__header-img" src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy">
+                    <span class="pp-card__header-label">ETF</span>
+                </div>
+                <div class="pp-card__body">
+                    <p class="pp-card__cat">ETF</p>
+                    <h3 class="pp-card__name">KISI IDX VALUE30 ETF</h3>
+                    <p class="pp-card__desc">Nasabah mendapatkan manfaat layaknya Investasi di saham-saham terpilih indeks nilai terbaik.</p>
+                    <div class="pp-card__meta">
+                        <span class="pp-card__risk-pill pp-card__risk-pill--tinggi">
+                            <span class="pp-card__risk-dot"></span>Risiko Tinggi
+                        </span>
+                    </div>
+                    <span class="pp-card__btn">
+                        Selengkapnya
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </span>
+                </div>
+            </a>
+
+        </div>
+
+        <div class="pp-footer">
+            <a href="404.html" class="btn-ol-navy">
+                Lihat Semua Produk
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- PANDUAN SPLIT -->
+<section class="panduan-split" aria-label="Panduan Investasi">
+    <div class="panduan-split__photo" role="img" aria-label="Belajar investasi"></div>
+    <div class="panduan-split__body">
+        <span class="panduan-split__eyebrow">Panduan Investasi</span>
+        <h2 class="panduan-split__title">Belum pernah Berinvestasi?</h2>
+        <p class="panduan-split__desc">Pelajari hal mendasar dari investasi untuk membantu Anda membuat keputusan yang lebih baik dan percaya diri.</p>
+        <a href="404.html" class="btn-ol-navy">
+            PELAJARI INVESTASI
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+    </div>
+</section>
+
+<!-- SIMULASI INVESTASI -->
+<section class="kalkulator-photo" aria-label="Simulasi Investasi">
+    <div class="container">
+        <div class="kalkulator-photo__inner">
+
+            <!-- Left: calculator illustration -->
+            <div class="kalkulator-photo__visual" aria-hidden="true">
+                <div class="calc-visual">
+                    <div class="calc-visual__ring">
+                        <div class="calc-visual__bg">
+                            <svg class="calc-visual__icon" width="68" height="68" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="4" y="2" width="16" height="20" rx="2"/>
+                                <line x1="8" y1="6" x2="16" y2="6"/>
+                                <line x1="8" y1="10" x2="8" y2="10" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="12" y1="10" x2="12" y2="10" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="16" y1="10" x2="16" y2="10" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="8" y1="14" x2="8" y2="14" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="12" y1="14" x2="12" y2="14" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="16" y1="14" x2="16" y2="14" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="8" y1="18" x2="12" y2="18" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="16" y1="18" x2="16" y2="18" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="calc-badge calc-badge--tl">
+                        <span class="calc-badge__dot calc-badge__dot--green"></span>
+                        Return +12% p.a.
+                    </div>
+                    <div class="calc-badge calc-badge--br">
+                        <span class="calc-badge__dot calc-badge__dot--blue"></span>
+                        Mulai Rp 10.000
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: content -->
+            <div class="kalkulator-photo__content">
+                <span class="kalkulator-photo__eyebrow">Simulasi Investasi</span>
+                <h2 class="kalkulator-photo__title">Produk Investasi dengan<br>Potensi Return Terbaik</h2>
+                <p class="kalkulator-photo__desc">Hitung nilai investasi Anda dengan fasilitas kalkulator simulasi kami. Temukan produk yang paling sesuai dengan tujuan keuangan Anda.</p>
+                <a href="404.html" class="btn-ol-white">
+                    KALKULATOR FINANSIAL
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- BERITA TERBARU -->
+<section class="news-section" id="berita" aria-labelledby="news-heading">
+    <div class="container">
+        <div class="news-main">
+            <div class="news-main__head">
+                <h2 class="news-main__title" id="news-heading">Berita terbaru</h2>
+                <p>Dapatkan informasi terbaru tentang kami</p>
+                <a href="blog.html" class="btn-ol-navy" style="margin-top:1.5rem">Semua Berita</a>
+            </div>
+            <div class="news-cards-grid">
+
+                <!-- News 1 -->
+                <article class="news-card">
+                    <a href="single-blog.html" class="news-card__img-wrap" tabindex="-1">
+                        <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy" class="news-card__img">
+                    </a>
+                    <div class="news-card__body">
+                        <div class="news-card__meta">
+                            <time class="news-card__date">9 Des 2025</time>
+                            <span class="news-card__cat">Press Release</span>
+                        </div>
+                        <h3 class="news-card__title"><a href="single-blog.html">KISI Asset Management Raih 5 Penghargaan Best Mutual Fund 2025</a></h3>
+                        <p class="news-card__excerpt">PT Korea Investment Management Indonesia berhasil meraih lima penghargaan bergengsi dalam ajang Infovesta Fund Awards 2025.</p>
+                        <a href="single-blog.html" class="news-card__link">
+                            Selengkapnya <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- News 2 -->
+                <article class="news-card">
+                    <a href="single-blog.html" class="news-card__img-wrap" tabindex="-1">
+                        <img src="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy" class="news-card__img">
+                    </a>
+                    <div class="news-card__body">
+                        <div class="news-card__meta">
+                            <time class="news-card__date">8 Des 2025</time>
+                            <span class="news-card__cat">Korporasi</span>
+                        </div>
+                        <h3 class="news-card__title"><a href="single-blog.html">Kolaborasi KISI Asset Management &amp; BSI untuk Reksa Dana Syariah</a></h3>
+                        <p class="news-card__excerpt">KISI Asset Management menandatangani MoU untuk menyiapkan peluncuran Reksa Dana berbasis syariah bersama Bank Syariah Indonesia.</p>
+                        <a href="single-blog.html" class="news-card__link">
+                            Selengkapnya <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- News 3 -->
+                <article class="news-card">
+                    <a href="single-blog.html" class="news-card__img-wrap" tabindex="-1">
+                        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy" class="news-card__img">
+                    </a>
+                    <div class="news-card__body">
+                        <div class="news-card__meta">
+                            <time class="news-card__date">28 Nov 2025</time>
+                            <span class="news-card__cat">Market Update</span>
+                        </div>
+                        <h3 class="news-card__title"><a href="single-blog.html">Update Kinerja Reksa Dana: Outlook Pasar Modal Indonesia 2026</a></h3>
+                        <p class="news-card__excerpt">Review kinerja dan outlook reksa dana Indonesia menjelang 2026 di tengah dinamika pasar global yang terus berubah.</p>
+                        <a href="single-blog.html" class="news-card__link">
+                            Selengkapnya <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+
+    <div class="footer-main">
+        <div class="container">
+            <div class="footer-grid">
+
+                <!-- Col 1: Brand -->
+                <div class="footer-brand">
+                    <a href="homepage-preview.html" class="footer-brand__logo" aria-label="Korea Investment Management Indonesia">
+                        <img src="https://koreainvestment.co.id/bundle/default/images/icon/logo-koreainvestment.png"
+                             alt="Korea Investment Management Indonesia"
+                             width="180" height="46" loading="lazy">
+                    </a>
+                    <p class="footer-brand__tagline">Manajer Investasi Terdaftar &amp; Diawasi OJK</p>
+                    <p class="footer-brand__desc">PT Korea Investment Management Indonesia (KISI Asset Management) hadir untuk membantu Anda meraih tujuan keuangan melalui solusi reksa dana yang terpercaya dan terukur.</p>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/kisi_am" class="footer-social__link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="https://linkedin.com/company/kisi-asset-management" class="footer-social__link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                        <a href="https://youtube.com/@kisiassetmanagement" class="footer-social__link" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Produk -->
+                <div class="footer-nav">
+                    <h4 class="footer-nav__title">Produk Kami</h4>
+                    <ul class="footer-nav__list">
+                        <li><a href="404.html">Reksa Dana Pasar Uang</a></li>
+                        <li><a href="404.html">Reksa Dana Pendapatan Tetap</a></li>
+                        <li><a href="404.html">Reksa Dana Campuran</a></li>
+                        <li><a href="404.html">Reksa Dana Saham</a></li>
+                        <li><a href="404.html">Reksa Dana Terproteksi</a></li>
+                        <li><a href="404.html">Reksa Dana ETF</a></li>
+                        <li><a href="404.html">Reksa Dana Global Syariah</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Cara Berinvestasi + Perusahaan -->
+                <div class="footer-nav">
+                    <h4 class="footer-nav__title">Cara Berinvestasi</h4>
+                    <ul class="footer-nav__list">
+                        <li><a href="404.html">Cara Beli dan Jual</a></li>
+                        <li><a href="404.html">Mitra Distribusi</a></li>
+                        <li><a href="404.html">Download Formulir</a></li>
+                        <li><a href="404.html">Pertanyaan Umum</a></li>
+                    </ul>
+                    <h4 class="footer-nav__title footer-nav__title--mt">Perusahaan</h4>
+                    <ul class="footer-nav__list">
+                        <li><a href="404.html">Tentang Kami</a></li>
+                        <li><a href="blog.html">Berita &amp; Info</a></li>
+                        <li><a href="404.html">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Hubungi Kami -->
+                <div class="footer-contact">
+                    <h4 class="footer-nav__title">Hubungi Kami</h4>
+                    <address class="footer-contact__address">
+                        <div class="footer-contact__item">
+                            <svg class="footer-contact__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span>Sequis Tower Lantai 6<br>Jl. Jend. Sudirman Kav. 71<br>Jakarta Selatan 12190</span>
+                        </div>
+                        <div class="footer-contact__item">
+                            <svg class="footer-contact__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.42 2 2 0 0 1 3.6 1.24h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.04 6.04l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <a href="tel:+622129911808">+62 21 299 11 808</a>
+                        </div>
+                        <div class="footer-contact__item">
+                            <svg class="footer-contact__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <a href="mailto:cs@koreainvestment.co.id">cs@koreainvestment.co.id</a>
+                        </div>
+                        <div class="footer-contact__item">
+                            <svg class="footer-contact__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            <span>Senin &ndash; Jumat, 09.00 &ndash; 17.00 WIB</span>
+                        </div>
+                    </address>
+                    <a href="404.html" class="btn btn--primary btn--sm footer-contact__cta">Mulai Investasi Sekarang</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- OJK Disclaimer Bar -->
+    <div class="footer-ojk">
+        <div class="container">
+            <div class="footer-ojk__inner">
+                <div class="footer-ojk__badge">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                        <rect width="32" height="32" rx="4" fill="#1A3E59"/>
+                        <path d="M16 6L7 11v5c0 5.25 3.83 10.17 9 11.37C21.17 26.17 25 21.25 25 16v-5L16 6z" fill="#5d8cb3" opacity="0.8"/>
+                        <path d="M13 16l2 2 4-4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <div>
+                        <strong>Terdaftar &amp; Diawasi OJK</strong>
+                        <span>No. Izin: KEP-07/PM/MI/2006</span>
+                    </div>
+                </div>
+                <p class="footer-ojk__disclaimer">
+                    Reksa Dana adalah produk pasar modal dan bukan merupakan produk perbankan. Reksa Dana tidak dijamin oleh pemerintah dan tidak termasuk dalam program penjaminan Lembaga Penjamin Simpanan (LPS). <strong>Investasi mengandung risiko</strong>. Kinerja masa lalu tidak menjamin kinerja masa depan. Bacalah Prospektus sebelum berinvestasi.
+                </p>
+                <div class="footer-ojk__parent">
+                    <span>Bagian dari</span>
+                    <strong>Korea Investment Holdings</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="footer-bottom__inner">
+                <p class="footer-bottom__copy">
+                    &copy; 2026 PT Korea Investment Management Indonesia (KISI Asset Management). Hak Cipta Dilindungi.
+                </p>
+                <nav class="footer-bottom__links" aria-label="Footer Legal Links">
+                    <a href="404.html">Kebijakan Privasi</a>
+                    <a href="404.html">Syarat &amp; Ketentuan</a>
+                    <a href="404.html">Sitemap</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<script>
+(function () {
+    'use strict';
+
+    // -- ANNOUNCEMENT BAR --
+    function initAnnouncementBar() {
+        var bar = document.getElementById('announcementBar');
+        var closeBtn = document.getElementById('closeAnnouncement');
+        var body = document.body;
+        if (!bar) return;
+        if (sessionStorage.getItem('kim_announcement_closed')) {
+            bar.style.display = 'none';
+            body.classList.remove('announcement-visible');
+            return;
+        }
+        body.classList.add('announcement-visible');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function () {
+                bar.classList.add('is-hidden');
+                setTimeout(function () { bar.style.display = 'none'; }, 300);
+                body.classList.remove('announcement-visible');
+                sessionStorage.setItem('kim_announcement_closed', '1');
+            });
+        }
+    }
+
+    // -- STICKY HEADER --
+    function initStickyHeader() {
+        var header = document.getElementById('siteHeader');
+        if (!header) return;
+        var ticking = false;
+        window.addEventListener('scroll', function () {
+            if (!ticking) {
+                window.requestAnimationFrame(function () {
+                    if (window.scrollY > 50) {
+                        header.classList.add('is-scrolled');
+                    } else {
+                        header.classList.remove('is-scrolled');
+                    }
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
+    }
+
+    // -- MOBILE MENU --
+    function initMobileMenu() {
+        var toggle = document.getElementById('menuToggle');
+        var nav = document.getElementById('primaryNav');
+        var overlay = document.getElementById('mobileOverlay');
+        var body = document.body;
+        if (!toggle || !nav) return;
+
+        function openMenu() {
+            nav.classList.add('is-open');
+            toggle.classList.add('is-active');
+            toggle.setAttribute('aria-expanded', 'true');
+            if (overlay) overlay.classList.add('is-active');
+            body.style.overflow = 'hidden';
+        }
+        function closeMenu() {
+            nav.classList.remove('is-open');
+            toggle.classList.remove('is-active');
+            toggle.setAttribute('aria-expanded', 'false');
+            if (overlay) overlay.classList.remove('is-active');
+            body.style.overflow = '';
+        }
+
+        toggle.addEventListener('click', function () {
+            nav.classList.contains('is-open') ? closeMenu() : openMenu();
+        });
+        if (overlay) overlay.addEventListener('click', closeMenu);
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+                closeMenu();
+                toggle.focus();
+            }
+        });
+
+        // Mobile dropdown toggles
+        var dropdownItems = nav.querySelectorAll('.nav-menu__item--dropdown');
+        dropdownItems.forEach(function (item) {
+            var link = item.querySelector('.nav-menu__link');
+            if (link) {
+                link.addEventListener('click', function (e) {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        item.classList.toggle('is-open');
+                    }
+                });
+            }
+        });
+
+        window.addEventListener('resize', function () {
+            if (window.innerWidth > 768 && nav.classList.contains('is-open')) closeMenu();
+        });
+    }
+
+    // -- HERO SLIDER --
+    function initHeroSlider() {
+        var slider = document.querySelector('.hero-slider');
+        if (!slider) return;
+        var slides = slider.querySelectorAll('.hero-slide');
+        var dots = slider.querySelectorAll('.hero-dot');
+        var prevBtn = slider.querySelector('.hero-slider__btn--prev');
+        var nextBtn = slider.querySelector('.hero-slider__btn--next');
+        var current = 0;
+        var total = slides.length;
+        var timer = null;
+        var INTERVAL = 5000;
+
+        function goTo(index) {
+            var prev = current;
+            current = (index + total) % total;
+            if (prev === current) return;
+            slides[prev].classList.remove('is-active');
+            if (dots[prev]) { dots[prev].classList.remove('is-active'); dots[prev].setAttribute('aria-selected', 'false'); }
+            slides[current].classList.add('is-active');
+            if (dots[current]) { dots[current].classList.add('is-active'); dots[current].setAttribute('aria-selected', 'true'); }
+        }
+        function next() { goTo(current + 1); }
+        function prev() { goTo(current - 1); }
+        function startAutoplay() { stopAutoplay(); timer = setInterval(next, INTERVAL); }
+        function stopAutoplay() { if (timer) { clearInterval(timer); timer = null; } }
+
+        dots.forEach(function (dot, i) {
+            dot.addEventListener('click', function () { goTo(i); startAutoplay(); });
+        });
+        if (prevBtn) prevBtn.addEventListener('click', function () { prev(); startAutoplay(); });
+        if (nextBtn) nextBtn.addEventListener('click', function () { next(); startAutoplay(); });
+
+        slider.addEventListener('mouseenter', stopAutoplay);
+        slider.addEventListener('mouseleave', startAutoplay);
+
+        // Touch swipe
+        var touchStartX = 0;
+        slider.addEventListener('touchstart', function (e) { touchStartX = e.changedTouches[0].clientX; }, { passive: true });
+        slider.addEventListener('touchend', function (e) {
+            var diff = touchStartX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 50) { diff > 0 ? next() : prev(); startAutoplay(); }
+        }, { passive: true });
+
+        goTo(0);
+        startAutoplay();
+    }
+
+    // -- SMOOTH SCROLL --
+    function initSmoothScroll() {
+        document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+            anchor.addEventListener('click', function (e) {
+                var href = this.getAttribute('href');
+                if (href === '#') return;
+                var target = document.querySelector(href);
+                if (!target) return;
+                e.preventDefault();
+                var headerHeight = document.getElementById('siteHeader') ? document.getElementById('siteHeader').offsetHeight : 0;
+                window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - headerHeight - 16, behavior: 'smooth' });
+            });
+        });
+    }
+
+    // -- SCROLL REVEAL --
+    function initScrollReveal() {
+        var elements = document.querySelectorAll('.pp-card, .news-card, .trust-strip__item');
+        if (!elements.length) return;
+        elements.forEach(function (el) {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        });
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry, i) {
+                if (entry.isIntersecting) {
+                    setTimeout(function () {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, 100 * (i % 4));
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        elements.forEach(function (el) { observer.observe(el); });
+    }
+
+    // -- LANGUAGE SWITCHER --
+    function initLanguageSwitcher() {
+        var btns = document.querySelectorAll('.lang-switcher__btn');
+        if (!btns.length) return;
+        btns.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                btns.forEach(function (b) { b.classList.remove('lang-switcher__btn--active'); });
+                btn.classList.add('lang-switcher__btn--active');
+                document.documentElement.lang = btn.dataset.lang === 'en' ? 'en' : 'id';
+            });
+        });
+    }
+
+    // -- INIT --
+    function init() {
+        initAnnouncementBar();
+        initStickyHeader();
+        initMobileMenu();
+        initHeroSlider();
+        initSmoothScroll();
+        initScrollReveal();
+        initLanguageSwitcher();
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+})();
+</script>
+</body>
+</html>
